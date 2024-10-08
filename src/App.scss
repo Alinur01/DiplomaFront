@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  font-family: 'Raleway', sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.burger {
+  top: 52px;
+  left: 50px;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  z-index: 100;
+  cursor: pointer;
+
+&_active {
+.burger__line {
+  background: transparent;
+
+&::before {
+   content: '';
+   width: 34px;
+   transform: rotate(45deg);
+   background: #252525;
+   top: 0;
+   transition: 0.5s;
+ }
+
+&::after {
+   content: '';
+   width: 34px;
+   transform: rotate(-45deg);
+   background: #252525;
+   top: 0;
+   transition: 0.5s;
+ }
+}
+}
+
+&__line {
+   width: 26px;
+   height: 4px;
+   background: #252525;
+   z-index: 10;
+   position: relative;
+   transition: .5s;
+
+
+&::before {
+   content: '';
+   width: 34px;
+   height: 4px;
+   background: #252525;
+   position: absolute;
+   top: -10px;
+   left: 0;
+   transition: .5s;
+
+ }
+
+&::after {
+   content: '';
+   width: 18px;
+   height: 4px;
+   background: #252525;
+   position: absolute;
+   top: 10px;
+   left: 0;
+   transition: .5s;
+ }
+
+}
+}
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 50;
+&_active {
+   display: flex;
+ }
+}
+
+
+@import "./layout/header/header";
+@import "./pages/home/home";
+@import "./pages/home/category/category";
+@import "./pages/home/first/first";
+@import "./layout/footer/footer";
+@import "./pages/catalog/catalog";
+@import "./pages/product/product";
+@import "./pages/product/rec/rec";
+@import "pages/basket/basket";
+@import "pages/basket/order/order";
+@import "pages/profile/profile";
+@import "pages/profile/history/history";
+@import "pages/profile/personalData/personalData";
+@import "./pages/register/register";
+@import "./pages/favorites/favorites";
+@import "./pages/adminPanel/adminPanel";
+@import "./pages/adminPanel/clothesAdd";
+@import "./pages/contact/contact";
+@import "./pages/contact/map/map";
+@import "./pages/catalog/selectForGenderClothes/select";
+@import "./pages/home/banner/banner";
+@import "pages/delivery/delivery";
+@import "pages/questions/questions";
