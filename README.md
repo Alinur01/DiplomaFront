@@ -3,5 +3,5 @@
 This is the home page
 
 For the run project you must write in terminal:
-npm i 
+npm i,
 npm run start
